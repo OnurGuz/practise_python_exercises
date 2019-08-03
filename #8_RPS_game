@@ -1,0 +1,45 @@
+#exercise 8
+#two-player Rock-Paper-Scissors game
+
+def playgame():
+    p1 = input('player 1, choose: r, p or s\n')
+    p2 = input('player 2, choose: r, p or s\n')
+
+    while p1 == 'r':
+        if p2 == 's':
+            print('player 1 wins')
+            break
+        elif p2 == 'r':
+            print('draw')
+            break
+        elif p2 == 'p':
+            print('player 2 wins')
+            break
+    while p1 == 'p':
+        if p2 == 's':
+            print('player 2 wins')
+            break
+        elif p2 == 'r':
+            print('player 1 wins')
+            break
+        elif p2 == 'p':
+            print('draw')
+            break
+    while p1 == 's':
+        if p2 == 's':
+            print('draw')
+            break
+        elif p2 == 'r':
+            print('player 2 wins')
+            break
+        elif p2 == 'p':
+            print('player 1 wins')
+            break
+
+    new = input('would you like to play a new game? y/n?\n')
+    if new == 'y':
+        return playgame()
+    elif new == 'n':
+        return
+    
+playgame()
