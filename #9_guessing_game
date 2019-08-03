@@ -1,0 +1,29 @@
+#exercise 9
+# number guessing game which counts how many times you guess
+# and restarts the game when you win, type exit to finish
+
+import random
+
+while True:    
+    num = random.randint(1,9)
+    num_of_guess = []
+    while True:
+        guess = input('Guess a number between 1 and 9\n')
+        
+        num_of_guess.append('e')
+        if guess == 'exit':
+            break
+        while True:
+            if num > int(guess):
+                print('too low')
+                break
+            elif num < int(guess):
+                print('too high')
+                break
+            elif num == int(guess):
+                print('correct, it took you ', len(num_of_guess), ' guesses')
+                break
+        if num == int(guess):
+            break
+    if guess == 'exit':
+            break
