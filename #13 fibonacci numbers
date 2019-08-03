@@ -1,0 +1,20 @@
+#exercise 13
+#print fibonacci numbers depending on how many the user wants 
+
+amount = int(input('How many Fibonacci numbers do you want?\n'))
+
+def add_last_two_num(num):
+    if len(num) == 1:
+        a = [num[-1]]
+    else:
+        a = [num[-1],num[-2]]
+    return sum(a)
+
+def append(a):
+    return a.append(add_last_two_num(a))
+
+fib = [1]
+while len(fib) < amount:
+    append(fib)
+
+print(fib)
