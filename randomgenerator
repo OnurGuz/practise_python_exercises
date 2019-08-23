@@ -1,0 +1,20 @@
+#create a random generator for a list that you create 
+
+import random
+
+a = []
+
+while True:
+    thing = input('Enter a variable, after adding however many variables you want, \ntype next to start the random generator \n')
+    a.append(thing)
+    if thing == 'next':
+        a.remove('next')
+        break
+print(random.choice(a))
+
+while True:
+    b = input('type exit to leave and end the random generator,\n otherwise press enter for another random variable from the list you made \n')
+    if b == 'exit':
+        break
+    else:
+        print(random.choice(a))
